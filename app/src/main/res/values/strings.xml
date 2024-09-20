@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FinanceApp_android</string>
+
+    <string name="dot">•</string>
+    <string name="onboarding_image">Onboarding Image</string>
+
+     <string-array name="time_filter_options">
+            <item>Day</item>
+            <item>Week</item>
+            <item>Month</item>
+            <item>Year</item>
+     </string-array>
+
+</resources>

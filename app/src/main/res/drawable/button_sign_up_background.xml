@@ -1,0 +1,5 @@
+<!-- res/drawable/button_sign_up_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#0A043C" /> <!-- Dark background color -->
+    <corners android:radius="64dp" /> <!-- Rounded corners -->
+</shape>

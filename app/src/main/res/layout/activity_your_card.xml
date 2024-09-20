@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ScrollView to enable scrolling -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Toolbar/ActionBar Placeholder -->
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/img_26" />
+
+                <TextView
+                    android:id="@+id/requestMoneyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:text="Your Card"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/optionsMenu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/img_27" />
+            </RelativeLayout>
+
+            <!-- Card 1 -->
+            <RelativeLayout
+                android:id="@+id/card1"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topBar"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/visaCard1"
+                    android:layout_width="360dp"
+                    android:layout_height="230dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_22" />
+
+                <TextView
+                    android:id="@+id/tv_card_label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="26dp"
+                    android:text="Payment Card"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_card_number1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2298 1268 3398 9874"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:layout_below="@id/tv_card_label1"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="26dp" />
+
+                <TextView
+                    android:id="@+id/tv_card_balance1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$2885.00"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:layout_below="@id/tv_card_number1"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="26dp" />
+
+                <TextView
+                    android:id="@+id/tv_card_expiry1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/visaCard1"
+                    android:layout_alignBottom="@+id/tv_card_balance1"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="12/24"
+                    android:textColor="#F0F2F4"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <!-- Card 2 -->
+            <RelativeLayout
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card1"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/visaCard2"
+                    android:layout_width="360dp"
+                    android:layout_height="230dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_22" />
+
+                <TextView
+                    android:id="@+id/tv_card_label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="26dp"
+                    android:text="Payment Card"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_card_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2298 1268 3398 9874"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:layout_below="@id/tv_card_label2"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="26dp" />
+
+                <TextView
+                    android:id="@+id/tv_card_balance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$2887.65"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:layout_below="@id/tv_card_number2"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="26dp" />
+
+                <TextView
+                    android:id="@+id/tv_card_expiry2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/visaCard2"
+                    android:layout_alignBottom="@+id/tv_card_balance2"
+                    android:gravity="center"
+                    android:layout_marginEnd="30dp"
+                    android:text="12/24"
+                    android:textColor="#F0F2F4"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <!-- Add Credit Card Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddCreditCard"
+                android:layout_width="360dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/card2"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/dashed_border"
+                android:padding="12dp"
+                android:layout_gravity="center"
+                android:text="+ Add Credit Card"
+                android:textColor="@color/color_splashscreen"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

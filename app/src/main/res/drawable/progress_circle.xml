@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Circle (Gray) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFF" /> <!-- Light gray background -->
+            <size android:width="60dp" android:height="60dp" />
+        </shape>
+    </item>
+
+    <!-- Progress Circle (Blue Arc) -->
+    <item>
+        <rotate
+            android:fromDegrees="-30">
+            <shape android:shape="oval"
+
+            android:useLevel="false">
+            <stroke
+                android:width="20px"
+                android:color="#1C2541" />
+        </shape>
+    </rotate>
+</item>
+
+    </layer-list>
+
+<!--    android:startAngle="0"-->
+<!--    android:sweepAngle="288"-->

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PhoneNumberActivity">
+
+    <TextView
+        android:id="@+id/phoneNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Phone Number"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/stylefont_medium"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/phoneNumberSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your mobile number to register an account"
+        android:textSize="16sp"
+        android:fontFamily="@font/stylefont_regular"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/phone_number_background">
+
+        <ImageView
+            android:id="@+id/countryFlag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/img_4"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="1dp"/>
+
+        <TextView
+            android:id="@+id/countryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+855"
+            android:textSize="15sp"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"/>
+
+<!--        <Spinner-->
+<!--            android:id="@+id/countryCodeSpinner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:background="@null"-->
+<!--            android:entries="@array/country_codes"-->
+<!--            android:layout_marginEnd="8dp"/>-->
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="6dp"/>
+
+        <EditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="@null"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendCodeButton"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_sign_up_background"
+        android:text="Send Code"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="340dp"
+        android:textColor="@android:color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpWithEmailButton"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up With Email"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_with_phone_background"
+        android:textColor="#000080" />
+
+
+</LinearLayout>

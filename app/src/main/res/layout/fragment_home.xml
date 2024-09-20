@@ -1,0 +1,367 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- Adjusted ImageView -->
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_24"
+            android:adjustViewBounds="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Bar Name -->
+        <LinearLayout
+            android:id="@+id/barName"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Welcome Back"
+                android:textSize="18dp"
+                android:textColor="@color/inactive_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Neang Sroytry"
+                android:textSize="23dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Icon No -->
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignTop="@+id/barName"
+            android:layout_alignBottom="@+id/barName"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/img_21" />
+
+        <!-- Balance Card -->
+        <RelativeLayout
+            android:id="@+id/balance_card"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/barName"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:id="@+id/tv_balance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="My Balance"
+                android:textColor="#1C2541"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="$2887.65"
+                android:textColor="#1C2541"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Divider Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_balance"
+                android:layout_marginTop="14dp"
+                android:background="#E0E0E0" />
+
+            <!-- Action buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_balance"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- Send Money Icon -->
+                <LinearLayout
+                    android:id="@+id/iConSendMoney"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/img_17" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Send"
+                        android:textColor="#1C2541"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <!-- Request Money Icon -->
+                <LinearLayout
+                    android:id="@+id/iconRequestMoney"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/img_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Request"
+                        android:textColor="#1C2541"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Pay Icon -->
+                <LinearLayout
+                    android:id="@+id/iconPay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/img_19" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pay"
+                        android:textColor="#1C2541"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Top Up Icon -->
+                <LinearLayout
+                    android:id="@+id/iConTopUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/img_20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Top up"
+                        android:textColor="#1C2541"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Your Cards Section -->
+        <LinearLayout
+            android:id="@+id/textOfCards"
+            android:orientation="horizontal"
+            android:layout_below="@id/balance_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/yourCard"
+                android:text="Your Card"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+            <TextView
+                android:text="View All"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- ViewPager for displaying the cards -->
+        <RelativeLayout
+            android:id="@+id/cardViewLayoutContainer"
+            android:layout_below="@id/textOfCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="270dp" />
+
+            <!-- Dots Indicator -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/dotsLayout"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/viewPager"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="8dp" />-->
+        </RelativeLayout>
+
+        <!-- Transactions -->
+        <LinearLayout
+            android:id="@+id/textOfItems"
+            android:orientation="horizontal"
+            android:layout_below="@id/cardViewLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/yourSaving"
+                android:text="Your Saving"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/viewAll"
+                android:text="View All"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Transaction Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewItem"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/textOfItems">
+
+            <RelativeLayout
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Icon ImageView -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/goal_icon"
+                    android:src="@drawable/img_23"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <!-- Goal Title TextView -->
+                <TextView
+                    android:id="@+id/goal_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Playstation"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/goal_icon"
+                    android:layout_marginStart="15dp"
+                    android:layout_alignTop="@id/goal_icon" />
+
+                <!-- Goal Description TextView -->
+                <TextView
+                    android:id="@+id/goal_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slim 1 TB 56 Games"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@id/goal_icon"
+                    android:layout_marginStart="15dp"
+                    android:layout_below="@id/goal_title"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Progress Circle -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/goal_progress"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/progress_circle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <!-- Progress Text -->
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

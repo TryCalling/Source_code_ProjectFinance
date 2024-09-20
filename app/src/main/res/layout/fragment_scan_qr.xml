@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- QR Code Scanner -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_framing_rect_width="240dp"
+        app:zxing_framing_rect_height="240dp"
+        android:layout_marginTop="2dp"
+        app:zxing_use_texture_view="true" />
+
+    <!-- Scanner Frame -->
+    <RelativeLayout
+        android:id="@+id/scanner_frame"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:backgroundTintMode="@color/colorPrimaryDark"
+        android:background="@drawable/qr_scan_box"> <!-- Use your custom drawable here -->
+
+        <!-- Moving Scanner Line -->
+        <View
+            android:id="@+id/scanner_line"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_splashscreen" /> <!-- Use the color or drawable for the line -->
+    </RelativeLayout>
+
+    <!-- Container for TextView and ImageButton -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="70dp">
+
+        <!-- Scan Instruction -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan QR Code here"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="65dp" />
+
+        <!-- Flashlight Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/flashlightButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_28"
+            android:scaleType="centerInside"
+            android:background="@drawable/flashlight_button"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State when the input field is focused -->
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@android:color/white" />
+            <stroke
+                android:width="2dp"
+                android:color="#1D1D3E" /> <!-- Dark purple border when focused -->
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- Default state when the input field is not focused -->
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" />
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/darker_gray" /> <!-- Gray border when not focused -->
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>
+

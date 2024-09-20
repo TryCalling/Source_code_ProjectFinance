@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".CreatePwdActivity">
+
+    <TextView
+        android:id="@+id/createPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stylefont_regular"
+        android:text="Create password"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="158dp"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/gifImageView"
+        android:src="@drawable/arrow2"
+        android:layout_marginTop="25dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="85dp">
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/password_dot_empty" />
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/password_dot_empty"
+            android:layout_marginStart="34dp"/>
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/password_dot_empty"
+            android:layout_marginStart="34dp"/>
+        <View
+            android:id="@+id/dot4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/password_dot_empty"
+            android:layout_marginStart="34dp"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_gravity="center"
+        android:layout_marginTop="168dp">
+
+        <!-- Numbers 1 to 9 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:text="1"
+            android:fontFamily="@font/stylefont_light"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="2"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="3"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:text="4"
+            android:fontFamily="@font/stylefont_light"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="5"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="6"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="7"
+            android:onClick="onNumberClick"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="8"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="9"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <!-- Zero button -->
+        <View
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/stylefont_light"
+            android:text="0"
+            android:onClick="onNumberClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+        <!-- Delete button -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_backspace_24"
+            android:onClick="onDeleteClick"
+            android:background="@drawable/button_selector"/>
+    </GridLayout>
+
+</LinearLayout>

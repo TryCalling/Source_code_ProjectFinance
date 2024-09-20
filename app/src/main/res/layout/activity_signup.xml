@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Welcome !"
+            android:fontFamily="@font/stylefont_medium"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:text="Full Name"
+            android:fontFamily="@font/stylefont_medium"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/fullNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:fontFamily="@font/stylefont_regular"
+            android:background="@drawable/background_full_name"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Email Address"
+            android:fontFamily="@font/stylefont_medium"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:fontFamily="@font/stylefont_regular"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/background_full_name"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/stylefont_medium"
+            android:text="Password" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+            android:fontFamily="@font/stylefont_regular"
+            android:inputType="textPassword"
+            android:background="@drawable/background_full_name"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <CheckBox
+            android:id="@+id/termsCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have agree to our "
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/termsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:clickable="true"
+            android:onClick="onTermsClick"
+            android:text="Terms and Conditions"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpButton"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_sign_up_background"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/phoneNumberButton"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="With Phone Number"
+            android:background="@drawable/button_with_phone_background"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/signInTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ? Sign In"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:clickable="true"
+            android:onClick="onSignInClick"/>
+
+    </LinearLayout>
+</ScrollView>

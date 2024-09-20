@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_24"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/img_34" />
+
+        <TextView
+            android:id="@+id/requestMoneyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Top Up"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/optionsMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/img_35" />
+    </RelativeLayout>
+
+    <!-- CardView containing the card details -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/showCard"
+        android:layout_width="360dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/topBar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- Card Image -->
+            <ImageView
+                android:id="@+id/visaCard"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_29" />
+
+            <!-- Card Label -->
+            <TextView
+                android:id="@+id/tv_card_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/visaCard"
+                android:text="Debit"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Card Balance -->
+            <TextView
+                android:id="@+id/tv_card_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/iv_dropdown_indicator"
+                android:text="$364.00"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Dropdown Indicator -->
+            <ImageView
+                android:id="@+id/iv_dropdown_indicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/img_30" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/enterNominal"
+        android:text="Enter Nominal"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:layout_alignStart="@id/showCard"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/showCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSetAmount"
+        android:layout_below="@+id/enterNominal"
+        android:layout_marginTop="25dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Label -->
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Set the nominal needs"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <!-- Minus Button -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/btn_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/flashlight_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_32" />
+
+            </FrameLayout>
+
+
+            <!-- Amount Display -->
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="$0"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <!-- Plus Button -->
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/btn_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/flashlight_button"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_31" />
+
+            </FrameLayout>
+
+            <!-- Slider -->
+            <SeekBar
+                android:id="@+id/amount_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_amount"
+                android:layout_marginTop="16dp"
+                android:max="500"
+                android:progress="0"
+                android:layout_marginBottom="25dp"
+                android:progressBackgroundTint="@color/gray"
+                android:progressTint="@color/black"
+                android:splitTrack="false"
+                android:thumbTint="@color/black" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    Select Amounts-->
+    <GridLayout
+        android:id="@+id/gridOfSetAmount"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_marginTop="25dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/cardSetAmount"
+        android:layout_gravity="center">
+
+        <!-- $50 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn50"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="$50"
+            android:fontFamily="@font/stylefont_light"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $100 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn100"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$100"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $150 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn150"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$150"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $200 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn200"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$200"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $250 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn250"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$250"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $300 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn300"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$300"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $350 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn350"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$350"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $400 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn400"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$400"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+
+        <!-- $450 Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn450"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:fontFamily="@font/stylefont_light"
+            android:text="$450"
+            android:onClick="onAmountClick"
+            android:background="@drawable/button_selector"
+            android:textColor="@drawable/color_selector"
+            android:textSize="18sp"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridOfSetAmount"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <!-- Proceed Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnProceed"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_sign_up_background"
+        android:text="Proceed"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/stylefont_light" />
+
+    <!-- Cancel Button -->
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        android:textColor="@color/color_splashscreen"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/stylefont_light"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

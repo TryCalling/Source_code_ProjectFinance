@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="16dp" />
+            <padding android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp" />
+            <size android:width="0dp" android:height="0dp" />
+            <solid android:color="@color/white" /> <!-- A light shadow color -->
+        </shape>
+    </item>
+
+    <!-- Background with rounded corners -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Your card background color -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>
